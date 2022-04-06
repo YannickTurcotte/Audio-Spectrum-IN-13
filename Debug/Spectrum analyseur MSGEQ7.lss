@@ -1,0 +1,967 @@
+
+Spectrum analyseur MSGEQ7.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000008  00800100  00000604  00000698  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000604  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000005  00800108  00800108  000006a0  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000006a0  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000006d0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000060  00000000  00000000  00000710  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000e29  00000000  00000000  00000770  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000a2d  00000000  00000000  00001599  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000710  00000000  00000000  00001fc6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000fc  00000000  00000000  000026d8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000591  00000000  00000000  000027d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000040b  00000000  00000000  00002d65  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000050  00000000  00000000  00003170  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 5a 00 	jmp	0xb4	; 0xb4 <__ctors_end>
+   4:	0c 94 cc 00 	jmp	0x198	; 0x198 <__vector_1>
+   8:	0c 94 90 00 	jmp	0x120	; 0x120 <__vector_2>
+   c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  10:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  14:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  18:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  1c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  20:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  24:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  28:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  2c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  30:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  34:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  38:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  3c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  40:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  44:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  48:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  4c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  50:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  54:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  58:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  5c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  60:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  64:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  68:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  6c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  70:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  74:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  78:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  7c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  80:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  84:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  88:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  8c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  90:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  94:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  98:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  9c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  a0:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  a4:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  a8:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  ac:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  b0:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+
+000000b4 <__ctors_end>:
+  b4:	11 24       	eor	r1, r1
+  b6:	1f be       	out	0x3f, r1	; 63
+  b8:	cf ef       	ldi	r28, 0xFF	; 255
+  ba:	d8 e0       	ldi	r29, 0x08	; 8
+  bc:	de bf       	out	0x3e, r29	; 62
+  be:	cd bf       	out	0x3d, r28	; 61
+
+000000c0 <__do_copy_data>:
+  c0:	11 e0       	ldi	r17, 0x01	; 1
+  c2:	a0 e0       	ldi	r26, 0x00	; 0
+  c4:	b1 e0       	ldi	r27, 0x01	; 1
+  c6:	e4 e0       	ldi	r30, 0x04	; 4
+  c8:	f6 e0       	ldi	r31, 0x06	; 6
+  ca:	02 c0       	rjmp	.+4      	; 0xd0 <__do_copy_data+0x10>
+  cc:	05 90       	lpm	r0, Z+
+  ce:	0d 92       	st	X+, r0
+  d0:	a8 30       	cpi	r26, 0x08	; 8
+  d2:	b1 07       	cpc	r27, r17
+  d4:	d9 f7       	brne	.-10     	; 0xcc <__do_copy_data+0xc>
+
+000000d6 <__do_clear_bss>:
+  d6:	21 e0       	ldi	r18, 0x01	; 1
+  d8:	a8 e0       	ldi	r26, 0x08	; 8
+  da:	b1 e0       	ldi	r27, 0x01	; 1
+  dc:	01 c0       	rjmp	.+2      	; 0xe0 <.do_clear_bss_start>
+
+000000de <.do_clear_bss_loop>:
+  de:	1d 92       	st	X+, r1
+
+000000e0 <.do_clear_bss_start>:
+  e0:	ad 30       	cpi	r26, 0x0D	; 13
+  e2:	b2 07       	cpc	r27, r18
+  e4:	e1 f7       	brne	.-8      	; 0xde <.do_clear_bss_loop>
+  e6:	0e 94 9b 01 	call	0x336	; 0x336 <main>
+  ea:	0c 94 00 03 	jmp	0x600	; 0x600 <_exit>
+
+000000ee <__bad_interrupt>:
+  ee:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000f2 <Send_Reset>:
+//******************************************************************************************************************************
+//******************************************************************************************************************************
+//Envoie un ResetPin state au msgeq7
+void Send_Reset(void){
+		//start at 0
+		RESETPORT &=~(1<<ResetPin); //ResetPin 0
+  f2:	59 98       	cbi	0x0b, 1	; 11
+		STROBEPORT &=~(1<<StrobePin); //StrobePin 0
+  f4:	58 98       	cbi	0x0b, 0	; 11
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  f6:	87 ec       	ldi	r24, 0xC7	; 199
+  f8:	90 e0       	ldi	r25, 0x00	; 0
+  fa:	01 97       	sbiw	r24, 0x01	; 1
+  fc:	f1 f7       	brne	.-4      	; 0xfa <Send_Reset+0x8>
+  fe:	00 c0       	rjmp	.+0      	; 0x100 <Send_Reset+0xe>
+ 100:	00 00       	nop
+		_delay_us(100); //StrobePin and ResetPin to 0 to begin with
+		//StrobePin high ResetPin high
+		RESETPORT |=(1<<ResetPin); //ResetPin 1
+ 102:	59 9a       	sbi	0x0b, 1	; 11
+		STROBEPORT |=(1<<StrobePin); //StrobePin 1
+ 104:	58 9a       	sbi	0x0b, 0	; 11
+ 106:	90 e3       	ldi	r25, 0x30	; 48
+ 108:	9a 95       	dec	r25
+ 10a:	f1 f7       	brne	.-4      	; 0x108 <Send_Reset+0x16>
+		_delay_us(18);
+		//StrobePin low ResetPin stay high
+		STROBEPORT &=~(1<<StrobePin); //StrobePin 0
+ 10c:	58 98       	cbi	0x0b, 0	; 11
+ 10e:	80 e3       	ldi	r24, 0x30	; 48
+ 110:	8a 95       	dec	r24
+ 112:	f1 f7       	brne	.-4      	; 0x110 <Send_Reset+0x1e>
+		_delay_us(18);
+		//StrobePin high ResetPin low
+		STROBEPORT |=(1<<StrobePin); //StrobePin 1
+ 114:	58 9a       	sbi	0x0b, 0	; 11
+		RESETPORT &=~(1<<ResetPin); //ResetPin 0
+ 116:	59 98       	cbi	0x0b, 1	; 11
+ 118:	90 ec       	ldi	r25, 0xC0	; 192
+ 11a:	9a 95       	dec	r25
+ 11c:	f1 f7       	brne	.-4      	; 0x11a <Send_Reset+0x28>
+ 11e:	08 95       	ret
+
+00000120 <__vector_2>:
+
+//******************************************************************************************************************************
+//************************************************INT 1 PUSH Button ************************************************************
+//Push button appuye. Soit pour repartir a zero soit pour ajuter les tubes
+ISR(INT1_vect)
+{
+ 120:	1f 92       	push	r1
+ 122:	0f 92       	push	r0
+ 124:	0f b6       	in	r0, 0x3f	; 63
+ 126:	0f 92       	push	r0
+ 128:	11 24       	eor	r1, r1
+ 12a:	8f 93       	push	r24
+	if (ConfigModeFlag == 1)		//Configmodeflag = 1 au demarrage Si pushbutton enfonce.
+ 12c:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
+ 130:	81 30       	cpi	r24, 0x01	; 1
+ 132:	81 f4       	brne	.+32     	; 0x154 <__vector_2+0x34>
+		{FrequenceFlag ++;			//frequence flag de 1 a 8 60 a 16000 hz
+ 134:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 138:	8f 5f       	subi	r24, 0xFF	; 255
+ 13a:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <FrequenceFlag>
+		ConfigModeFlag = 2;			// Est mis a 2 pour dire en retour qu'on veut updater la frequence. Aller dans la sous-ritine Configmode.	
+ 13e:	82 e0       	ldi	r24, 0x02	; 2
+ 140:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
+			if (FrequenceFlag == 8)
+ 144:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 148:	88 30       	cpi	r24, 0x08	; 8
+ 14a:	39 f4       	brne	.+14     	; 0x15a <__vector_2+0x3a>
+			{FrequenceFlag = 1;
+ 14c:	81 e0       	ldi	r24, 0x01	; 1
+ 14e:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <FrequenceFlag>
+ 152:	03 c0       	rjmp	.+6      	; 0x15a <__vector_2+0x3a>
+		}
+	} 
+	else
+	{
+		RepartAZeroFlag = 1; //Les tube sont décallé. Pushbutton appuyé et repartazero demandé
+ 154:	81 e0       	ldi	r24, 0x01	; 1
+ 156:	80 93 09 01 	sts	0x0109, r24	; 0x800109 <RepartAZeroFlag>
+	}
+	
+}
+ 15a:	8f 91       	pop	r24
+ 15c:	0f 90       	pop	r0
+ 15e:	0f be       	out	0x3f, r0	; 63
+ 160:	0f 90       	pop	r0
+ 162:	1f 90       	pop	r1
+ 164:	18 95       	reti
+
+00000166 <Power_Supply_On>:
+	
+}
+//******************************************************************************************************************************
+//******************************************* Power_Supply_On *******************************************************************
+void Power_Supply_On(void){
+    SoundSenseDDR |=(1<<SoundSensePin); // pd2 en sortie
+ 166:	52 9a       	sbi	0x0a, 2	; 10
+    SoundSensePORT	&=~(1<<SoundSensePin); // a 0 )vide le condensateur et empeche le son d'etre present lors du power on. Il doit arriver apres.
+ 168:	5a 98       	cbi	0x0b, 2	; 11
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 16a:	2f ef       	ldi	r18, 0xFF	; 255
+ 16c:	80 e7       	ldi	r24, 0x70	; 112
+ 16e:	92 e0       	ldi	r25, 0x02	; 2
+ 170:	21 50       	subi	r18, 0x01	; 1
+ 172:	80 40       	sbci	r24, 0x00	; 0
+ 174:	90 40       	sbci	r25, 0x00	; 0
+ 176:	e1 f7       	brne	.-8      	; 0x170 <Power_Supply_On+0xa>
+ 178:	00 c0       	rjmp	.+0      	; 0x17a <Power_Supply_On+0x14>
+ 17a:	00 00       	nop
+    _delay_ms(100);
+	DDRC = 0;	//Port c en entree. pull up activé sur 7 msb et pinc0 en entree sans pull-up. Si en sortie = 0v = no psu
+ 17c:	17 b8       	out	0x07, r1	; 7
+	PORTC &=~(1<<PINC0);
+ 17e:	40 98       	cbi	0x08, 0	; 8
+    SoundSenseDDR &=~(1<<SoundSensePin); // pour pd2 en entrée
+ 180:	52 98       	cbi	0x0a, 2	; 10
+    SoundSensePORT	&=~(1<<SoundSensePin); // sans pullup
+ 182:	5a 98       	cbi	0x0b, 2	; 11
+ 184:	2f ef       	ldi	r18, 0xFF	; 255
+ 186:	81 ee       	ldi	r24, 0xE1	; 225
+ 188:	94 e0       	ldi	r25, 0x04	; 4
+ 18a:	21 50       	subi	r18, 0x01	; 1
+ 18c:	80 40       	sbci	r24, 0x00	; 0
+ 18e:	90 40       	sbci	r25, 0x00	; 0
+ 190:	e1 f7       	brne	.-8      	; 0x18a <Power_Supply_On+0x24>
+ 192:	00 c0       	rjmp	.+0      	; 0x194 <Power_Supply_On+0x2e>
+ 194:	00 00       	nop
+ 196:	08 95       	ret
+
+00000198 <__vector_1>:
+	}
+	
+}
+
+ISR(INT0_vect)
+{
+ 198:	1f 92       	push	r1
+ 19a:	0f 92       	push	r0
+ 19c:	0f b6       	in	r0, 0x3f	; 63
+ 19e:	0f 92       	push	r0
+ 1a0:	11 24       	eor	r1, r1
+ 1a2:	2f 93       	push	r18
+ 1a4:	3f 93       	push	r19
+ 1a6:	4f 93       	push	r20
+ 1a8:	5f 93       	push	r21
+ 1aa:	6f 93       	push	r22
+ 1ac:	7f 93       	push	r23
+ 1ae:	8f 93       	push	r24
+ 1b0:	9f 93       	push	r25
+ 1b2:	af 93       	push	r26
+ 1b4:	bf 93       	push	r27
+ 1b6:	ef 93       	push	r30
+ 1b8:	ff 93       	push	r31
+	OffFlag = Autooff;
+ 1ba:	80 e1       	ldi	r24, 0x10	; 16
+ 1bc:	9b ee       	ldi	r25, 0xEB	; 235
+ 1be:	a9 e0       	ldi	r26, 0x09	; 9
+ 1c0:	b0 e0       	ldi	r27, 0x00	; 0
+ 1c2:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <OffFlag>
+ 1c6:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <OffFlag+0x1>
+ 1ca:	a0 93 04 01 	sts	0x0104, r26	; 0x800104 <OffFlag+0x2>
+ 1ce:	b0 93 05 01 	sts	0x0105, r27	; 0x800105 <OffFlag+0x3>
+	Power_Supply_On();
+ 1d2:	0e 94 b3 00 	call	0x166	; 0x166 <Power_Supply_On>
+	RepartAZeroFlag = 1; //réaligne les tube au cas.
+ 1d6:	81 e0       	ldi	r24, 0x01	; 1
+ 1d8:	80 93 09 01 	sts	0x0109, r24	; 0x800109 <RepartAZeroFlag>
+	EIMSK &=~(1<<INT0); //deactive int0 tant que power off n'est pas atteint. empeche tout plein de int0 pour rien
+ 1dc:	e8 98       	cbi	0x1d, 0	; 29
+	
+}
+ 1de:	ff 91       	pop	r31
+ 1e0:	ef 91       	pop	r30
+ 1e2:	bf 91       	pop	r27
+ 1e4:	af 91       	pop	r26
+ 1e6:	9f 91       	pop	r25
+ 1e8:	8f 91       	pop	r24
+ 1ea:	7f 91       	pop	r23
+ 1ec:	6f 91       	pop	r22
+ 1ee:	5f 91       	pop	r21
+ 1f0:	4f 91       	pop	r20
+ 1f2:	3f 91       	pop	r19
+ 1f4:	2f 91       	pop	r18
+ 1f6:	0f 90       	pop	r0
+ 1f8:	0f be       	out	0x3f, r0	; 63
+ 1fa:	0f 90       	pop	r0
+ 1fc:	1f 90       	pop	r1
+ 1fe:	18 95       	reti
+
+00000200 <Power_Supply_Off>:
+    _delay_ms(200);
+}
+
+void Power_Supply_Off(void){
+	
+	if (bit_is_set(PINB,PINB4))	{
+ 200:	1c 9b       	sbis	0x03, 4	; 3
+ 202:	10 c0       	rjmp	.+32     	; 0x224 <Power_Supply_Off+0x24>
+	DDRC |=(1<<PINC0);	//Pinc0 en sortie avec 0v = power supply off
+ 204:	38 9a       	sbi	0x07, 0	; 7
+	PINC &=~(1<<PINC0);	
+ 206:	30 98       	cbi	0x06, 0	; 6
+	OffFlag = 1;
+ 208:	81 e0       	ldi	r24, 0x01	; 1
+ 20a:	90 e0       	ldi	r25, 0x00	; 0
+ 20c:	a0 e0       	ldi	r26, 0x00	; 0
+ 20e:	b0 e0       	ldi	r27, 0x00	; 0
+ 210:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <OffFlag>
+ 214:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <OffFlag+0x1>
+ 218:	a0 93 04 01 	sts	0x0104, r26	; 0x800104 <OffFlag+0x2>
+ 21c:	b0 93 05 01 	sts	0x0105, r27	; 0x800105 <OffFlag+0x3>
+	EIMSK |=(1<<INT0); //reactive int0 pour pouvoir le rallumer.
+ 220:	e8 9a       	sbi	0x1d, 0	; 29
+ 222:	08 95       	ret
+	}
+	else
+	{
+	OffFlag = Autooff;
+ 224:	80 e1       	ldi	r24, 0x10	; 16
+ 226:	9b ee       	ldi	r25, 0xEB	; 235
+ 228:	a9 e0       	ldi	r26, 0x09	; 9
+ 22a:	b0 e0       	ldi	r27, 0x00	; 0
+ 22c:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <OffFlag>
+ 230:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <OffFlag+0x1>
+ 234:	a0 93 04 01 	sts	0x0104, r26	; 0x800104 <OffFlag+0x2>
+ 238:	b0 93 05 01 	sts	0x0105, r27	; 0x800105 <OffFlag+0x3>
+ 23c:	08 95       	ret
+
+0000023e <ConfigMode>:
+//********************************************* ConfigMode *********************************************************************
+//Ici on alterne entre chaque frequence a chaque fois qu'on appuie sur le bouton
+//sorti sur pd7
+void ConfigMode(void){
+	
+		TCCR1A |=(1<<COM1A0); //ctc mode 2. Toggle OC0A on Compare Match
+ 23e:	e0 e8       	ldi	r30, 0x80	; 128
+ 240:	f0 e0       	ldi	r31, 0x00	; 0
+ 242:	80 81       	ld	r24, Z
+ 244:	80 64       	ori	r24, 0x40	; 64
+ 246:	80 83       	st	Z, r24
+		OCR1A = 0;
+ 248:	10 92 89 00 	sts	0x0089, r1	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 24c:	10 92 88 00 	sts	0x0088, r1	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+		TCCR1B = 0;				//Arrete le compteur pour le repartir a la bonne vitesse et bon prescaler
+ 250:	10 92 81 00 	sts	0x0081, r1	; 0x800081 <__TEXT_REGION_LENGTH__+0x7e0081>
+		TCNT1 = 0;				//IMPORTANT pour que le compteur reparte de 0
+ 254:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7e0085>
+ 258:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7e0084>
+		if (FrequenceFlag ==1)
+ 25c:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 260:	81 30       	cpi	r24, 0x01	; 1
+ 262:	59 f4       	brne	.+22     	; 0x27a <ConfigMode+0x3c>
+		{//Peak 64
+			//16-bit Timer/Counter1 64.3hz output on pb1
+			OCR1A = 243;
+ 264:	83 ef       	ldi	r24, 0xF3	; 243
+ 266:	90 e0       	ldi	r25, 0x00	; 0
+ 268:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 26c:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+			TCCR1B |=(1<<WGM12)|(1<<CS02); //start counter 256 prescale
+ 270:	e1 e8       	ldi	r30, 0x81	; 129
+ 272:	f0 e0       	ldi	r31, 0x00	; 0
+ 274:	80 81       	ld	r24, Z
+ 276:	8c 60       	ori	r24, 0x0C	; 12
+ 278:	80 83       	st	Z, r24
+		}
+		if (FrequenceFlag ==2)
+ 27a:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 27e:	82 30       	cpi	r24, 0x02	; 2
+ 280:	59 f4       	brne	.+22     	; 0x298 <ConfigMode+0x5a>
+		{//Peak 166
+			//16-bit Timer/Counter1 166.22hz output on pb1
+			OCR1A = 93;
+ 282:	8d e5       	ldi	r24, 0x5D	; 93
+ 284:	90 e0       	ldi	r25, 0x00	; 0
+ 286:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 28a:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+			TCCR1B |=(1<<WGM12)|(1<<CS02); //start counter 256 prescale
+ 28e:	e1 e8       	ldi	r30, 0x81	; 129
+ 290:	f0 e0       	ldi	r31, 0x00	; 0
+ 292:	80 81       	ld	r24, Z
+ 294:	8c 60       	ori	r24, 0x0C	; 12
+ 296:	80 83       	st	Z, r24
+		}
+		if (FrequenceFlag ==3)
+ 298:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 29c:	83 30       	cpi	r24, 0x03	; 3
+ 29e:	59 f4       	brne	.+22     	; 0x2b6 <ConfigMode+0x78>
+		{//Peak 400
+			//16-bit Timer/Counter1 400.3hz output on pb1
+			OCR1A = 155;
+ 2a0:	8b e9       	ldi	r24, 0x9B	; 155
+ 2a2:	90 e0       	ldi	r25, 0x00	; 0
+ 2a4:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 2a8:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+			TCCR1B |=(1<<WGM12)|(1<<CS01)|(1<<CS00); //start counter 64 prescale
+ 2ac:	e1 e8       	ldi	r30, 0x81	; 129
+ 2ae:	f0 e0       	ldi	r31, 0x00	; 0
+ 2b0:	80 81       	ld	r24, Z
+ 2b2:	8b 60       	ori	r24, 0x0B	; 11
+ 2b4:	80 83       	st	Z, r24
+		}		
+		if (FrequenceFlag ==4)
+ 2b6:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 2ba:	84 30       	cpi	r24, 0x04	; 4
+ 2bc:	59 f4       	brne	.+22     	; 0x2d4 <ConfigMode+0x96>
+		{//Peak 970
+			//16-bit Timer/Counter1 976.56hz output on pb1
+			OCR1A = 63;
+ 2be:	8f e3       	ldi	r24, 0x3F	; 63
+ 2c0:	90 e0       	ldi	r25, 0x00	; 0
+ 2c2:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 2c6:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+			TCCR1B |=(1<<WGM12)|(1<<CS01)|(1<<CS00); //start counter 64 prescale
+ 2ca:	e1 e8       	ldi	r30, 0x81	; 129
+ 2cc:	f0 e0       	ldi	r31, 0x00	; 0
+ 2ce:	80 81       	ld	r24, Z
+ 2d0:	8b 60       	ori	r24, 0x0B	; 11
+ 2d2:	80 83       	st	Z, r24
+		}	
+		if (FrequenceFlag ==5)
+ 2d4:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 2d8:	85 30       	cpi	r24, 0x05	; 5
+ 2da:	59 f4       	brne	.+22     	; 0x2f2 <ConfigMode+0xb4>
+		{//Peak 2390
+			//16-bit Timer/Counter1 2403.84hz output on pb1
+			OCR1A = 25;
+ 2dc:	89 e1       	ldi	r24, 0x19	; 25
+ 2de:	90 e0       	ldi	r25, 0x00	; 0
+ 2e0:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 2e4:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+			TCCR1B |=(1<<WGM12)|(1<<CS01)|(1<<CS00); //start counter 64 prescale
+ 2e8:	e1 e8       	ldi	r30, 0x81	; 129
+ 2ea:	f0 e0       	ldi	r31, 0x00	; 0
+ 2ec:	80 81       	ld	r24, Z
+ 2ee:	8b 60       	ori	r24, 0x0B	; 11
+ 2f0:	80 83       	st	Z, r24
+		}
+		if (FrequenceFlag ==6)
+ 2f2:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 2f6:	86 30       	cpi	r24, 0x06	; 6
+ 2f8:	59 f4       	brne	.+22     	; 0x310 <ConfigMode+0xd2>
+		{//Peak 5940
+			//16-bit Timer/Counter1 5952.38hz output on pb1
+			OCR1A = 83;
+ 2fa:	83 e5       	ldi	r24, 0x53	; 83
+ 2fc:	90 e0       	ldi	r25, 0x00	; 0
+ 2fe:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 302:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+			TCCR1B |=(1<<WGM12)|(1<<CS01); //start counter 8 prescale
+ 306:	e1 e8       	ldi	r30, 0x81	; 129
+ 308:	f0 e0       	ldi	r31, 0x00	; 0
+ 30a:	80 81       	ld	r24, Z
+ 30c:	8a 60       	ori	r24, 0x0A	; 10
+ 30e:	80 83       	st	Z, r24
+		}
+		if (FrequenceFlag ==7)
+ 310:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <FrequenceFlag>
+ 314:	87 30       	cpi	r24, 0x07	; 7
+ 316:	59 f4       	brne	.+22     	; 0x32e <ConfigMode+0xf0>
+		{//Peak 14850
+			//16-bit Timer/Counter1 14705.88hz output on pb1
+			OCR1A = 33;
+ 318:	81 e2       	ldi	r24, 0x21	; 33
+ 31a:	90 e0       	ldi	r25, 0x00	; 0
+ 31c:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7e0089>
+ 320:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7e0088>
+			TCCR1B |=(1<<WGM12)|(1<<CS01); //start counter 8 prescale
+ 324:	e1 e8       	ldi	r30, 0x81	; 129
+ 326:	f0 e0       	ldi	r31, 0x00	; 0
+ 328:	80 81       	ld	r24, Z
+ 32a:	8a 60       	ori	r24, 0x0A	; 10
+ 32c:	80 83       	st	Z, r24
+		}
+		ConfigModeFlag = 1;
+ 32e:	81 e0       	ldi	r24, 0x01	; 1
+ 330:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
+ 334:	08 95       	ret
+
+00000336 <main>:
+void ConfigOutputHigh(void);
+void ConfigOutputLow(void);
+
+int main(void)
+{	
+	cli();
+ 336:	f8 94       	cli
+	STROBEDDR |=(1<<StrobePin); //pd0 and 1 output
+ 338:	50 9a       	sbi	0x0a, 0	; 10
+	RESETDDR |=(1<<ResetPin);
+ 33a:	51 9a       	sbi	0x0a, 1	; 10
+	STROBEPORT &=~(1<<StrobePin); //0
+ 33c:	58 98       	cbi	0x0b, 0	; 11
+	RESETPORT &=~(1<<ResetPin); //0
+ 33e:	59 98       	cbi	0x0b, 1	; 11
+	MSGEQ7_Osc_DDR  |=(1<<MSGEQ7_OscPin); //pd6 sortie pour oscillateur
+ 340:	56 9a       	sbi	0x0a, 6	; 10
+	DDRB = 0b11101111;	//portb sortie except pb4 for Always mode on
+ 342:	8f ee       	ldi	r24, 0xEF	; 239
+ 344:	84 b9       	out	0x04, r24	; 4
+	PORTB = 0b00010000;
+ 346:	80 e1       	ldi	r24, 0x10	; 16
+ 348:	85 b9       	out	0x05, r24	; 5
+	ConfigOutputDDR |=(1<<ConfigOutputPin); //pb1 output square wave calibration
+ 34a:	33 b1       	in	r19, 0x03	; 3
+ 34c:	24 b1       	in	r18, 0x04	; 4
+ 34e:	81 e0       	ldi	r24, 0x01	; 1
+ 350:	90 e0       	ldi	r25, 0x00	; 0
+ 352:	02 c0       	rjmp	.+4      	; 0x358 <main+0x22>
+ 354:	88 0f       	add	r24, r24
+ 356:	99 1f       	adc	r25, r25
+ 358:	3a 95       	dec	r19
+ 35a:	e2 f7       	brpl	.-8      	; 0x354 <main+0x1e>
+ 35c:	82 2b       	or	r24, r18
+ 35e:	84 b9       	out	0x04, r24	; 4
+	ConfigOutputPort &=~(1<<ConfigOutput); //pb1 a 0
+ 360:	29 98       	cbi	0x05, 1	; 5
+	
+	DDRD |=(1<<PIND7); //Pd7 output for demux
+ 362:	57 9a       	sbi	0x0a, 7	; 10
+	
+//InvertPin init	
+	InvertDDR &=~(1<<Invert); //port en entrée
+ 364:	23 98       	cbi	0x04, 3	; 4
+	InvertPort |=(1<<Invert); // pull up
+ 366:	2b 9a       	sbi	0x05, 3	; 5
+	
+	FreqOutDDR |=(1<<FreqOutPin); // pb1 en sortie
+ 368:	21 9a       	sbi	0x04, 1	; 4
+
+//8-bit Timer/Counter0 160khz output on pd6. This is needed for the msgeq7 to operate
+	TCCR0A |=(1<<WGM01)|(1<<COM0A0); //ctc mode 2. Toggle OC0A on Compare Match
+ 36a:	84 b5       	in	r24, 0x24	; 36
+ 36c:	82 64       	ori	r24, 0x42	; 66
+ 36e:	84 bd       	out	0x24, r24	; 36
+	OCR0A = 0x18;
+ 370:	88 e1       	ldi	r24, 0x18	; 24
+ 372:	87 bd       	out	0x27, r24	; 39
+	TCCR0B |=(1<<CS00); //start counter
+ 374:	85 b5       	in	r24, 0x25	; 37
+ 376:	81 60       	ori	r24, 0x01	; 1
+ 378:	85 bd       	out	0x25, r24	; 37
+
+//Preparation AutoOff AutoOn et mise a Off at startup
+//SoundSensePin to 0 pour vider le condensateur au debut et en entree tout de suite apres.
+
+	Power_Supply_On(); //put power supply on
+ 37a:	0e 94 b3 00 	call	0x166	; 0x166 <Power_Supply_On>
+
+//PushButton en entree avec pull up
+	DDRD &=~(1<<PushButton);	//pd3 en entree
+ 37e:	53 98       	cbi	0x0a, 3	; 10
+	PORTD |=(1<<PushButton);	//pullup sur pd3
+ 380:	5b 9a       	sbi	0x0b, 3	; 11
+ 382:	8f e1       	ldi	r24, 0x1F	; 31
+ 384:	9e e4       	ldi	r25, 0x4E	; 78
+ 386:	01 97       	sbiw	r24, 0x01	; 1
+ 388:	f1 f7       	brne	.-4      	; 0x386 <main+0x50>
+ 38a:	00 c0       	rjmp	.+0      	; 0x38c <main+0x56>
+ 38c:	00 00       	nop
+	_delay_ms(10); //laisse le temps a la pull up de charger le condensateur
+	
+// regarde si pushbutton is pressed if yes = config mode
+if (bit_is_clear(PushButtonPin,PushButton))
+ 38e:	4b 99       	sbic	0x09, 3	; 9
+ 390:	03 c0       	rjmp	.+6      	; 0x398 <main+0x62>
+{
+	ConfigModeFlag = 2;
+ 392:	82 e0       	ldi	r24, 0x02	; 2
+ 394:	80 93 08 01 	sts	0x0108, r24	; 0x800108 <__data_end>
+}
+
+//int0 et 1 a configurer
+	EICRA  |=((1<<ISC11)|(1<<ISC01)|(1<<ISC00)); // falling edge int1 --rising int0
+ 398:	e9 e6       	ldi	r30, 0x69	; 105
+ 39a:	f0 e0       	ldi	r31, 0x00	; 0
+ 39c:	80 81       	ld	r24, Z
+ 39e:	8b 60       	ori	r24, 0x0B	; 11
+ 3a0:	80 83       	st	Z, r24
+	EIMSK |=(1<<INT1); // active Pushbutton
+ 3a2:	e9 9a       	sbi	0x1d, 1	; 29
+	sei();
+ 3a4:	78 94       	sei
+	Send_Reset(); // send ResetPin to msgeq7	 
+ 3a6:	0e 94 79 00 	call	0xf2	; 0xf2 <Send_Reset>
+			
+				if (bit_is_clear(PIND,SoundSensePin))
+				{OffFlag--;
+				}
+			else
+			{OffFlag = Autooff;
+ 3aa:	0f 2e       	mov	r0, r31
+ 3ac:	f0 e1       	ldi	r31, 0x10	; 16
+ 3ae:	cf 2e       	mov	r12, r31
+ 3b0:	fb ee       	ldi	r31, 0xEB	; 235
+ 3b2:	df 2e       	mov	r13, r31
+ 3b4:	f9 e0       	ldi	r31, 0x09	; 9
+ 3b6:	ef 2e       	mov	r14, r31
+ 3b8:	f1 2c       	mov	r15, r1
+ 3ba:	f0 2d       	mov	r31, r0
+			{Power_Supply_Off();
+			}
+		}
+		RecenterFlag --;	// apres le for 1 a 7 ou 7 a 0 on decremente de recenter flag de 1. Quand = 00 on recentre les tube en envoyant reset
+		if (RecenterFlag == 0)
+		{RepartAZeroFlag =1;
+ 3bc:	01 e0       	ldi	r16, 0x01	; 1
+		RecenterFlag = 1984;
+ 3be:	c0 ec       	ldi	r28, 0xC0	; 192
+ 3c0:	d7 e0       	ldi	r29, 0x07	; 7
+//******************************************************************************************************************************
+//******************************************************************************************************************************
+    while (1) 
+    {
+		if (bit_is_set(InvertPin,Invert)) //sense le jumper Invert. 
+		{for (i = 6; i < 255; i--)
+ 3c2:	16 e0       	ldi	r17, 0x06	; 6
+//******************************************************************************************************************************
+//******************************************************************************************************************************
+//******************************************************************************************************************************
+    while (1) 
+    {
+		if (bit_is_set(InvertPin,Invert)) //sense le jumper Invert. 
+ 3c4:	1b 9b       	sbis	0x03, 3	; 3
+ 3c6:	8e c0       	rjmp	.+284    	; 0x4e4 <__LOCK_REGION_LENGTH__+0xe4>
+		{for (i = 6; i < 255; i--)
+ 3c8:	10 93 0c 01 	sts	0x010C, r17	; 0x80010c <i>
+ 3cc:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 3d0:	8f 3f       	cpi	r24, 0xFF	; 255
+ 3d2:	09 f4       	brne	.+2      	; 0x3d6 <main+0xa0>
+ 3d4:	70 c0       	rjmp	.+224    	; 0x4b6 <__LOCK_REGION_LENGTH__+0xb6>
+			{
+				if (RepartAZeroFlag == 1)
+ 3d6:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <RepartAZeroFlag>
+ 3da:	81 30       	cpi	r24, 0x01	; 1
+ 3dc:	31 f4       	brne	.+12     	; 0x3ea <main+0xb4>
+				{	Send_Reset();
+ 3de:	0e 94 79 00 	call	0xf2	; 0xf2 <Send_Reset>
+					i=6;
+ 3e2:	10 93 0c 01 	sts	0x010C, r17	; 0x80010c <i>
+					RepartAZeroFlag = 0;
+ 3e6:	10 92 09 01 	sts	0x0109, r1	; 0x800109 <RepartAZeroFlag>
+				}
+	
+				if (ConfigModeFlag == 2)
+ 3ea:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
+ 3ee:	82 30       	cpi	r24, 0x02	; 2
+ 3f0:	11 f4       	brne	.+4      	; 0x3f6 <main+0xc0>
+				{ConfigMode();
+ 3f2:	0e 94 1f 01 	call	0x23e	; 0x23e <ConfigMode>
+				}
+	
+				//switcher ici le multiplexeur
+				//ici on a doit envoyer le lsb et le msb sur pb0 et pb3 mais le bit du millieu sur pd7
+					
+				temp = 0;
+ 3f6:	10 92 0b 01 	sts	0x010B, r1	; 0x80010b <temp>
+				temp = PORTB & 0b11111010;  //on masque pour conserver ce qu'on veut conserver (1)
+ 3fa:	85 b1       	in	r24, 0x05	; 5
+ 3fc:	8a 7f       	andi	r24, 0xFA	; 250
+ 3fe:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <temp>
+				PORTB = temp | i;			
+ 402:	90 91 0b 01 	lds	r25, 0x010B	; 0x80010b <temp>
+ 406:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 40a:	89 2b       	or	r24, r25
+ 40c:	85 b9       	out	0x05, r24	; 5
+				temp = 0;
+ 40e:	10 92 0b 01 	sts	0x010B, r1	; 0x80010b <temp>
+				temp2=0;
+ 412:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <temp2>
+				temp = i<<6; 				//On switch pb1 de 6 pour mettre sur pd7
+ 416:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 41a:	82 95       	swap	r24
+ 41c:	88 0f       	add	r24, r24
+ 41e:	88 0f       	add	r24, r24
+ 420:	80 7c       	andi	r24, 0xC0	; 192
+ 422:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <temp>
+				temp2 = PORTD & 0b01111111; //on masque pour conserver ce qu'on veut conserver (1)
+ 426:	8b b1       	in	r24, 0x0b	; 11
+ 428:	8f 77       	andi	r24, 0x7F	; 127
+ 42a:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <temp2>
+				PORTD = temp2|temp;
+ 42e:	90 91 0a 01 	lds	r25, 0x010A	; 0x80010a <temp2>
+ 432:	80 91 0b 01 	lds	r24, 0x010B	; 0x80010b <temp>
+ 436:	89 2b       	or	r24, r25
+ 438:	8b b9       	out	0x0b, r24	; 11
+									
+				STROBEPORT &=~(1<<StrobePin); //StrobePin 0
+ 43a:	58 98       	cbi	0x0b, 0	; 11
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 43c:	90 e9       	ldi	r25, 0x90	; 144
+ 43e:	9a 95       	dec	r25
+ 440:	f1 f7       	brne	.-4      	; 0x43e <__LOCK_REGION_LENGTH__+0x3e>
+				_delay_us(54); //output is in multiplexer le condensateur (base transistor) se charge.
+				
+				STROBEPORT |=(1<<StrobePin); //StrobePin 1
+ 442:	58 9a       	sbi	0x0b, 0	; 11
+ 444:	80 e3       	ldi	r24, 0x30	; 48
+ 446:	8a 95       	dec	r24
+ 448:	f1 f7       	brne	.-4      	; 0x446 <__LOCK_REGION_LENGTH__+0x46>
+				_delay_us(18); //attends 18us et on recommence. avec 2 delais 54 et 18 us on a le minimun de 72us demande.
+				
+				if (bit_is_clear(PIND,SoundSensePin))  //auto on off
+ 44a:	4a 99       	sbic	0x09, 2	; 9
+ 44c:	14 c0       	rjmp	.+40     	; 0x476 <__LOCK_REGION_LENGTH__+0x76>
+				{OffFlag--;
+ 44e:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <OffFlag>
+ 452:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <OffFlag+0x1>
+ 456:	a0 91 04 01 	lds	r26, 0x0104	; 0x800104 <OffFlag+0x2>
+ 45a:	b0 91 05 01 	lds	r27, 0x0105	; 0x800105 <OffFlag+0x3>
+ 45e:	01 97       	sbiw	r24, 0x01	; 1
+ 460:	a1 09       	sbc	r26, r1
+ 462:	b1 09       	sbc	r27, r1
+ 464:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <OffFlag>
+ 468:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <OffFlag+0x1>
+ 46c:	a0 93 04 01 	sts	0x0104, r26	; 0x800104 <OffFlag+0x2>
+ 470:	b0 93 05 01 	sts	0x0105, r27	; 0x800105 <OffFlag+0x3>
+ 474:	08 c0       	rjmp	.+16     	; 0x486 <__LOCK_REGION_LENGTH__+0x86>
+				}
+				else
+				{OffFlag = Autooff;
+ 476:	c0 92 02 01 	sts	0x0102, r12	; 0x800102 <OffFlag>
+ 47a:	d0 92 03 01 	sts	0x0103, r13	; 0x800103 <OffFlag+0x1>
+ 47e:	e0 92 04 01 	sts	0x0104, r14	; 0x800104 <OffFlag+0x2>
+ 482:	f0 92 05 01 	sts	0x0105, r15	; 0x800105 <OffFlag+0x3>
+				}
+				if (OffFlag == 0)
+ 486:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <OffFlag>
+ 48a:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <OffFlag+0x1>
+ 48e:	a0 91 04 01 	lds	r26, 0x0104	; 0x800104 <OffFlag+0x2>
+ 492:	b0 91 05 01 	lds	r27, 0x0105	; 0x800105 <OffFlag+0x3>
+ 496:	89 2b       	or	r24, r25
+ 498:	8a 2b       	or	r24, r26
+ 49a:	8b 2b       	or	r24, r27
+ 49c:	11 f4       	brne	.+4      	; 0x4a2 <__LOCK_REGION_LENGTH__+0xa2>
+				{Power_Supply_Off();
+ 49e:	0e 94 00 01 	call	0x200	; 0x200 <Power_Supply_Off>
+//******************************************************************************************************************************
+//******************************************************************************************************************************
+    while (1) 
+    {
+		if (bit_is_set(InvertPin,Invert)) //sense le jumper Invert. 
+		{for (i = 6; i < 255; i--)
+ 4a2:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 4a6:	81 50       	subi	r24, 0x01	; 1
+ 4a8:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <i>
+ 4ac:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 4b0:	8f 3f       	cpi	r24, 0xFF	; 255
+ 4b2:	09 f0       	breq	.+2      	; 0x4b6 <__LOCK_REGION_LENGTH__+0xb6>
+ 4b4:	90 cf       	rjmp	.-224    	; 0x3d6 <main+0xa0>
+				}
+				if (OffFlag == 0)
+				{Power_Supply_Off();
+				}
+			}
+			RecenterFlag --;	// apres le for 1 a 7 ou 7 a 0 on decremente de recenter flag de 1. Quand = 00 on recentre les tube en envoyant reset
+ 4b6:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <RecenterFlag>
+ 4ba:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <RecenterFlag+0x1>
+ 4be:	01 97       	sbiw	r24, 0x01	; 1
+ 4c0:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <RecenterFlag+0x1>
+ 4c4:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <RecenterFlag>
+			if (RecenterFlag == 0)
+ 4c8:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <RecenterFlag>
+ 4cc:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <RecenterFlag+0x1>
+ 4d0:	89 2b       	or	r24, r25
+ 4d2:	09 f0       	breq	.+2      	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+ 4d4:	77 cf       	rjmp	.-274    	; 0x3c4 <main+0x8e>
+			{RepartAZeroFlag =1;
+ 4d6:	00 93 09 01 	sts	0x0109, r16	; 0x800109 <RepartAZeroFlag>
+			RecenterFlag = 1984;
+ 4da:	d0 93 01 01 	sts	0x0101, r29	; 0x800101 <RecenterFlag+0x1>
+ 4de:	c0 93 00 01 	sts	0x0100, r28	; 0x800100 <RecenterFlag>
+ 4e2:	70 cf       	rjmp	.-288    	; 0x3c4 <main+0x8e>
+		}
+	}
+	else
+	{for (i = 0;i < 7; i++)//for (i = 6;i < 255; i--)
+ 4e4:	10 92 0c 01 	sts	0x010C, r1	; 0x80010c <i>
+ 4e8:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 4ec:	87 30       	cpi	r24, 0x07	; 7
+ 4ee:	08 f0       	brcs	.+2      	; 0x4f2 <__LOCK_REGION_LENGTH__+0xf2>
+ 4f0:	70 c0       	rjmp	.+224    	; 0x5d2 <__LOCK_REGION_LENGTH__+0x1d2>
+		{
+				if (RepartAZeroFlag == 1)
+ 4f2:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <RepartAZeroFlag>
+ 4f6:	81 30       	cpi	r24, 0x01	; 1
+ 4f8:	31 f4       	brne	.+12     	; 0x506 <__LOCK_REGION_LENGTH__+0x106>
+				{Send_Reset();
+ 4fa:	0e 94 79 00 	call	0xf2	; 0xf2 <Send_Reset>
+				i=0;
+ 4fe:	10 92 0c 01 	sts	0x010C, r1	; 0x80010c <i>
+				RepartAZeroFlag = 0;
+ 502:	10 92 09 01 	sts	0x0109, r1	; 0x800109 <RepartAZeroFlag>
+				}
+			
+				if (ConfigModeFlag == 2)
+ 506:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <__data_end>
+ 50a:	82 30       	cpi	r24, 0x02	; 2
+ 50c:	11 f4       	brne	.+4      	; 0x512 <__LOCK_REGION_LENGTH__+0x112>
+				{ConfigMode();
+ 50e:	0e 94 1f 01 	call	0x23e	; 0x23e <ConfigMode>
+				}			
+			
+				//switcher ici le multiplexeur
+				//ici on a doit envoyer le lsb et le msb sur pb0 et pb3 mais le bit du millieu sur pd7
+				temp = 0;
+ 512:	10 92 0b 01 	sts	0x010B, r1	; 0x80010b <temp>
+				temp = PORTB & 0b11111010;  //on masque pour conserver ce qu'on veut conserver (1)
+ 516:	85 b1       	in	r24, 0x05	; 5
+ 518:	8a 7f       	andi	r24, 0xFA	; 250
+ 51a:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <temp>
+				PORTB = temp | i;			//
+ 51e:	90 91 0b 01 	lds	r25, 0x010B	; 0x80010b <temp>
+ 522:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 526:	89 2b       	or	r24, r25
+ 528:	85 b9       	out	0x05, r24	; 5
+				temp = 0;
+ 52a:	10 92 0b 01 	sts	0x010B, r1	; 0x80010b <temp>
+				temp2=0;
+ 52e:	10 92 0a 01 	sts	0x010A, r1	; 0x80010a <temp2>
+				temp = i<<6; 				//On switch pb1 de 6 pour mettre sur pd7
+ 532:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 536:	82 95       	swap	r24
+ 538:	88 0f       	add	r24, r24
+ 53a:	88 0f       	add	r24, r24
+ 53c:	80 7c       	andi	r24, 0xC0	; 192
+ 53e:	80 93 0b 01 	sts	0x010B, r24	; 0x80010b <temp>
+				temp2 = PORTD & 0b01111111; //on masque pour conserver ce qu'on veut conserver (1)
+ 542:	8b b1       	in	r24, 0x0b	; 11
+ 544:	8f 77       	andi	r24, 0x7F	; 127
+ 546:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <temp2>
+				PORTD = temp2|temp;
+ 54a:	90 91 0a 01 	lds	r25, 0x010A	; 0x80010a <temp2>
+ 54e:	80 91 0b 01 	lds	r24, 0x010B	; 0x80010b <temp>
+ 552:	89 2b       	or	r24, r25
+ 554:	8b b9       	out	0x0b, r24	; 11
+				STROBEPORT &=~(1<<StrobePin); //StrobePin 0
+ 556:	58 98       	cbi	0x0b, 0	; 11
+ 558:	90 e9       	ldi	r25, 0x90	; 144
+ 55a:	9a 95       	dec	r25
+ 55c:	f1 f7       	brne	.-4      	; 0x55a <__LOCK_REGION_LENGTH__+0x15a>
+				_delay_us(54);//output is in multiplexer le condensateur (base transistor) se charge.
+			
+				STROBEPORT |=(1<<StrobePin); //StrobePin 1
+ 55e:	58 9a       	sbi	0x0b, 0	; 11
+ 560:	80 e3       	ldi	r24, 0x30	; 48
+ 562:	8a 95       	dec	r24
+ 564:	f1 f7       	brne	.-4      	; 0x562 <__LOCK_REGION_LENGTH__+0x162>
+				_delay_us(18); //attends 36us et on recommence. avec 2 delais de 36us on a le minimun de 72us demande. S'ajoute a ca le temps des in-13
+			
+				if (bit_is_clear(PIND,SoundSensePin))
+ 566:	4a 99       	sbic	0x09, 2	; 9
+ 568:	14 c0       	rjmp	.+40     	; 0x592 <__LOCK_REGION_LENGTH__+0x192>
+				{OffFlag--;
+ 56a:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <OffFlag>
+ 56e:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <OffFlag+0x1>
+ 572:	a0 91 04 01 	lds	r26, 0x0104	; 0x800104 <OffFlag+0x2>
+ 576:	b0 91 05 01 	lds	r27, 0x0105	; 0x800105 <OffFlag+0x3>
+ 57a:	01 97       	sbiw	r24, 0x01	; 1
+ 57c:	a1 09       	sbc	r26, r1
+ 57e:	b1 09       	sbc	r27, r1
+ 580:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <OffFlag>
+ 584:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <OffFlag+0x1>
+ 588:	a0 93 04 01 	sts	0x0104, r26	; 0x800104 <OffFlag+0x2>
+ 58c:	b0 93 05 01 	sts	0x0105, r27	; 0x800105 <OffFlag+0x3>
+ 590:	08 c0       	rjmp	.+16     	; 0x5a2 <__LOCK_REGION_LENGTH__+0x1a2>
+				}
+			else
+			{OffFlag = Autooff;
+ 592:	c0 92 02 01 	sts	0x0102, r12	; 0x800102 <OffFlag>
+ 596:	d0 92 03 01 	sts	0x0103, r13	; 0x800103 <OffFlag+0x1>
+ 59a:	e0 92 04 01 	sts	0x0104, r14	; 0x800104 <OffFlag+0x2>
+ 59e:	f0 92 05 01 	sts	0x0105, r15	; 0x800105 <OffFlag+0x3>
+			}
+			if (OffFlag == 0)
+ 5a2:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <OffFlag>
+ 5a6:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <OffFlag+0x1>
+ 5aa:	a0 91 04 01 	lds	r26, 0x0104	; 0x800104 <OffFlag+0x2>
+ 5ae:	b0 91 05 01 	lds	r27, 0x0105	; 0x800105 <OffFlag+0x3>
+ 5b2:	89 2b       	or	r24, r25
+ 5b4:	8a 2b       	or	r24, r26
+ 5b6:	8b 2b       	or	r24, r27
+ 5b8:	11 f4       	brne	.+4      	; 0x5be <__LOCK_REGION_LENGTH__+0x1be>
+			{Power_Supply_Off();
+ 5ba:	0e 94 00 01 	call	0x200	; 0x200 <Power_Supply_Off>
+			{RepartAZeroFlag =1;
+			RecenterFlag = 1984;
+		}
+	}
+	else
+	{for (i = 0;i < 7; i++)//for (i = 6;i < 255; i--)
+ 5be:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 5c2:	8f 5f       	subi	r24, 0xFF	; 255
+ 5c4:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <i>
+ 5c8:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <i>
+ 5cc:	87 30       	cpi	r24, 0x07	; 7
+ 5ce:	08 f4       	brcc	.+2      	; 0x5d2 <__LOCK_REGION_LENGTH__+0x1d2>
+ 5d0:	90 cf       	rjmp	.-224    	; 0x4f2 <__LOCK_REGION_LENGTH__+0xf2>
+			}
+			if (OffFlag == 0)
+			{Power_Supply_Off();
+			}
+		}
+		RecenterFlag --;	// apres le for 1 a 7 ou 7 a 0 on decremente de recenter flag de 1. Quand = 00 on recentre les tube en envoyant reset
+ 5d2:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <RecenterFlag>
+ 5d6:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <RecenterFlag+0x1>
+ 5da:	01 97       	sbiw	r24, 0x01	; 1
+ 5dc:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <RecenterFlag+0x1>
+ 5e0:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <RecenterFlag>
+		if (RecenterFlag == 0)
+ 5e4:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <RecenterFlag>
+ 5e8:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <RecenterFlag+0x1>
+ 5ec:	89 2b       	or	r24, r25
+ 5ee:	09 f0       	breq	.+2      	; 0x5f2 <__LOCK_REGION_LENGTH__+0x1f2>
+ 5f0:	e9 ce       	rjmp	.-558    	; 0x3c4 <main+0x8e>
+		{RepartAZeroFlag =1;
+ 5f2:	00 93 09 01 	sts	0x0109, r16	; 0x800109 <RepartAZeroFlag>
+		RecenterFlag = 1984;
+ 5f6:	d0 93 01 01 	sts	0x0101, r29	; 0x800101 <RecenterFlag+0x1>
+ 5fa:	c0 93 00 01 	sts	0x0100, r28	; 0x800100 <RecenterFlag>
+ 5fe:	e2 ce       	rjmp	.-572    	; 0x3c4 <main+0x8e>
+
+00000600 <_exit>:
+ 600:	f8 94       	cli
+
+00000602 <__stop_program>:
+ 602:	ff cf       	rjmp	.-2      	; 0x602 <__stop_program>
